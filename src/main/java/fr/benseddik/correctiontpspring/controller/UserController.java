@@ -3,6 +3,7 @@ package fr.benseddik.correctiontpspring.controller;
 import fr.benseddik.correctiontpspring.domain.User;
 import fr.benseddik.correctiontpspring.service.UserService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,9 @@ public class UserController {
 
     @PostMapping("/add")
     public ResponseEntity<User> addUser(@RequestBody User user) {
-        return ResponseEntity.ok(userService.addUser(user));
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(userService.addUser(user));
     }
 
     @GetMapping
