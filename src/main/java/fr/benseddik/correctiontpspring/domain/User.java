@@ -1,6 +1,9 @@
 package fr.benseddik.correctiontpspring.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.util.UUID;
@@ -20,6 +23,12 @@ public class User {
     @Column(nullable = false)
     private Long id;
     private UUID uuid;
+    @NotNull(message = "Name is mandatory")
+    @NotBlank(message = "Name is mandatory")
     private String name;
+    @NotNull(message = "Email is mandatory")
+    @NotBlank(message = "Email is mandatory")
+    @Column(unique = true)
+    @Email(message = "Email is not valid")
     private String email;
 }

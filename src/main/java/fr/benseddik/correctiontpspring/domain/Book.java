@@ -1,6 +1,8 @@
 package fr.benseddik.correctiontpspring.domain;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.util.UUID;
@@ -19,7 +21,11 @@ public class Book {
     @Column(nullable = false)
     private Long id;
     private UUID uuid;
+    @NotNull(message = "Title is mandatory")
+    @NotBlank(message = "Title is mandatory")
     private String title;
+    @NotNull(message = "Author is mandatory")
+    @NotBlank(message = "Author is mandatory")
     private String author;
 
     private boolean isAvailable;

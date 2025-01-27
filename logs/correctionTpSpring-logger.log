@@ -59,3 +59,516 @@
 2025-01-25 08:20:29,255 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-25 08:20:29,256 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
 2025-01-25 08:20:29,258 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-01-27 09:38:30,840 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CorrectionTpSpringApplication using Java 17.0.12 with PID 69239 (/Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring/target/classes started by fethi in /Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring)
+2025-01-27 09:38:30,841 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-01-27 09:38:30,841 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-01-27 09:38:30,851 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+java.lang.NoClassDefFoundError: fr/benseddik/correctiontpspring/repository/IUserRepository
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555)
+	at org.springframework.boot.BeanDefinitionLoader.hasNoConstructors(BeanDefinitionLoader.java:293)
+	at org.springframework.boot.BeanDefinitionLoader.isEligible(BeanDefinitionLoader.java:285)
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:160)
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:136)
+	at org.springframework.boot.BeanDefinitionLoader.load(BeanDefinitionLoader.java:129)
+	at org.springframework.boot.SpringApplication.load(SpringApplication.java:697)
+	at org.springframework.boot.SpringApplication.prepareContext(SpringApplication.java:414)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at fr.benseddik.correctiontpspring.CorrectionTpSpringApplication.main(CorrectionTpSpringApplication.java:27)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.ClassNotFoundException: fr.benseddik.correctiontpspring.repository.IUserRepository
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 19 common frames omitted
+2025-01-27 09:38:32,330 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CorrectionTpSpringApplication using Java 17.0.12 with PID 69239 (/Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring/target/classes started by fethi in /Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring)
+2025-01-27 09:38:32,330 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-01-27 09:38:32,330 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-01-27 09:38:32,409 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27 09:38:32,416 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-01-27 09:38:32,460 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2025-01-27 09:38:32,461 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2025-01-27 09:38:32,461 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27 09:38:32,467 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-01-27 09:38:32,467 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 136 ms
+2025-01-27 09:38:32,484 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27 09:38:32,485 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-01-27 09:38:32,489 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27 09:38:32,489 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Starting...
+2025-01-27 09:38:32,511 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@64e1a87f
+2025-01-27 09:38:32,511 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-3 - Start completed.
+2025-01-27 09:38:32,513 WARN org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27 09:38:32,514 INFO org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27 09:38:32,564 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27 09:38:32,564 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 09:38:32,613 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27 09:38:32,679 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-01-27 09:38:32,686 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2025-01-27 09:38:32,689 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CorrectionTpSpringApplication in 0.382 seconds (process running for 2727.845)
+2025-01-27 09:38:32,690 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2025-01-27 09:52:13,194 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 8 class path changes (1 addition, 5 deletions, 2 modifications)
+2025-01-27 09:52:13,194 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-9] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-27 09:52:13,196 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-01-27 09:52:13,197 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-9] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 09:52:13,197 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-3 - Shutdown initiated...
+2025-01-27 09:52:13,198 INFO com.zaxxer.hikari.HikariDataSource [Thread-9] HikariPool-3 - Shutdown completed.
+2025-01-27 09:52:13,256 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CorrectionTpSpringApplication using Java 17.0.12 with PID 69239 (/Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring/target/classes started by fethi in /Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring)
+2025-01-27 09:52:13,256 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-01-27 09:52:13,256 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-01-27 09:52:13,348 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27 09:52:13,355 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-01-27 09:52:13,411 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2025-01-27 09:52:13,412 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2025-01-27 09:52:13,412 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27 09:52:13,417 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-01-27 09:52:13,418 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 161 ms
+2025-01-27 09:52:13,440 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27 09:52:13,442 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-01-27 09:52:13,447 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27 09:52:13,448 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Starting...
+2025-01-27 09:52:13,472 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@5bc48115
+2025-01-27 09:52:13,473 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Start completed.
+2025-01-27 09:52:13,474 WARN org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27 09:52:13,476 INFO org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27 09:52:13,509 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27 09:52:13,509 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 09:52:13,545 WARN org.springframework.context.support.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'borrowingController': Resolution of declared constructors on bean Class [fr.benseddik.correctiontpspring.controller.BorrowingController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7ad55161] failed
+2025-01-27 09:52:13,545 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 09:52:13,546 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Shutdown initiated...
+2025-01-27 09:52:13,546 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-4 - Shutdown completed.
+2025-01-27 09:52:13,546 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Stopping service [Tomcat]
+2025-01-27 09:52:13,550 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger [restartedMain] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-27 09:52:13,551 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'borrowingController': Resolution of declared constructors on bean Class [fr.benseddik.correctiontpspring.controller.BorrowingController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@7ad55161] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:384)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1320)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1215)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at fr.benseddik.correctiontpspring.CorrectionTpSpringApplication.main(CorrectionTpSpringApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.NoClassDefFoundError: fr/benseddik/correctiontpspring/service/BorrowingService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:3373)
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2555)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:379)
+	... 25 common frames omitted
+Caused by: java.lang.ClassNotFoundException: fr.benseddik.correctiontpspring.service.BorrowingService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	... 29 common frames omitted
+2025-01-27 09:59:05,358 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-01-27 09:59:05,376 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CorrectionTpSpringApplication using Java 17.0.12 with PID 75167 (/Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring/target/classes started by fethi in /Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring)
+2025-01-27 09:59:05,376 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-01-27 09:59:05,377 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-01-27 09:59:05,393 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-27 09:59:05,394 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-27 09:59:05,733 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27 09:59:05,758 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 21 ms. Found 3 JPA repository interfaces.
+2025-01-27 09:59:05,980 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2025-01-27 09:59:05,986 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-27 09:59:05,987 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2025-01-27 09:59:05,987 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27 09:59:06,008 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-01-27 09:59:06,008 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 614 ms
+2025-01-27 09:59:06,067 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2025-01-27 09:59:06,138 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@231cb460
+2025-01-27 09:59:06,139 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2025-01-27 09:59:06,412 INFO liquibase.logging.core.JavaLogger [restartedMain] Set default schema name to public
+2025-01-27 09:59:06,593 INFO liquibase.logging.core.JavaLogger [restartedMain] Creating database history table with name: public.databasechangelog
+2025-01-27 09:59:06,612 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 09:59:06,643 INFO liquibase.logging.core.JavaLogger [restartedMain] Creating snapshot
+2025-01-27 09:59:06,753 INFO liquibase.logging.core.JavaLogger [restartedMain] Successfully acquired change log lock
+2025-01-27 09:59:06,754 INFO liquibase.logging.core.JavaLogger [restartedMain] Using deploymentId: 7968346055
+2025-01-27 09:59:06,756 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 09:59:06,767 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-1::Fethi
+2025-01-27 09:59:06,777 INFO liquibase.logging.core.JavaLogger [restartedMain] Sequence book_seq created
+2025-01-27 09:59:06,779 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-1::Fethi ran successfully in 11ms
+2025-01-27 09:59:06,782 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-2::Fethi
+2025-01-27 09:59:06,784 INFO liquibase.logging.core.JavaLogger [restartedMain] Sequence borrow_seq created
+2025-01-27 09:59:06,785 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-2::Fethi ran successfully in 3ms
+2025-01-27 09:59:06,786 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-3::Fethi
+2025-01-27 09:59:06,788 INFO liquibase.logging.core.JavaLogger [restartedMain] Sequence user_seq created
+2025-01-27 09:59:06,788 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-3::Fethi ran successfully in 1ms
+2025-01-27 09:59:06,791 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-4::Fethi
+2025-01-27 09:59:06,793 INFO liquibase.logging.core.JavaLogger [restartedMain] Table book created
+2025-01-27 09:59:06,794 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-4::Fethi ran successfully in 3ms
+2025-01-27 09:59:06,796 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-5::Fethi
+2025-01-27 09:59:06,798 INFO liquibase.logging.core.JavaLogger [restartedMain] Table borrowing created
+2025-01-27 09:59:06,799 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-5::Fethi ran successfully in 3ms
+2025-01-27 09:59:06,802 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-6::Fethi
+2025-01-27 09:59:06,806 INFO liquibase.logging.core.JavaLogger [restartedMain] Table users created
+2025-01-27 09:59:06,807 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-6::Fethi ran successfully in 5ms
+2025-01-27 09:59:06,809 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-7::Fethi
+2025-01-27 09:59:06,812 INFO liquibase.logging.core.JavaLogger [restartedMain] Foreign key constraint added to borrowing (book_id)
+2025-01-27 09:59:06,813 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-7::Fethi ran successfully in 4ms
+2025-01-27 09:59:06,815 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-8::Fethi
+2025-01-27 09:59:06,816 INFO liquibase.logging.core.JavaLogger [restartedMain] Foreign key constraint added to borrowing (user_id)
+2025-01-27 09:59:06,817 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-8::Fethi ran successfully in 2ms
+2025-01-27 09:59:06,819 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/utils/changelog-default-value.xml::1713851378415-default-value-role::fethi
+2025-01-27 09:59:06,821 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to borrowing.borrow_date
+2025-01-27 09:59:06,822 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to borrowing.uuid
+2025-01-27 09:59:06,823 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to users.uuid
+2025-01-27 09:59:06,823 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to book.uuid
+2025-01-27 09:59:06,824 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to book.is_available
+2025-01-27 09:59:06,825 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/utils/changelog-default-value.xml::1713851378415-default-value-role::fethi ran successfully in 6ms
+2025-01-27 09:59:06,828 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/utils/changelog-load-data.xml::1713851378415-load-data::fethi
+2025-01-27 09:59:06,847 INFO liquibase.logging.core.JavaLogger [restartedMain] Data loaded from 'db/data/user.csv' into table 'users'
+2025-01-27 09:59:06,866 INFO liquibase.logging.core.JavaLogger [restartedMain] Data loaded from 'db/data/book.csv' into table 'book'
+2025-01-27 09:59:06,896 INFO liquibase.logging.core.JavaLogger [restartedMain] Data loaded from 'db/data/borrowing.csv' into table 'borrowing'
+2025-01-27 09:59:06,898 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/utils/changelog-load-data.xml::1713851378415-load-data::fethi ran successfully in 70ms
+2025-01-27 09:59:06,903 INFO liquibase.logging.core.JavaLogger [restartedMain] UPDATE SUMMARY
+2025-01-27 09:59:06,903 INFO liquibase.logging.core.JavaLogger [restartedMain] Run:                         10
+2025-01-27 09:59:06,903 INFO liquibase.logging.core.JavaLogger [restartedMain] Previously run:               0
+2025-01-27 09:59:06,903 INFO liquibase.logging.core.JavaLogger [restartedMain] Filtered out:                 0
+2025-01-27 09:59:06,903 INFO liquibase.logging.core.JavaLogger [restartedMain] -------------------------------
+2025-01-27 09:59:06,904 INFO liquibase.logging.core.JavaLogger [restartedMain] Total change sets:           10
+2025-01-27 09:59:06,904 INFO liquibase.logging.core.JavaLogger [restartedMain] Update summary generated
+2025-01-27 09:59:06,906 INFO liquibase.logging.core.JavaLogger [restartedMain] Update command completed successfully.
+2025-01-27 09:59:06,906 INFO liquibase.logging.core.JavaLogger [restartedMain] Liquibase: Update has been successful. Rows affected: 120
+2025-01-27 09:59:06,911 INFO liquibase.logging.core.JavaLogger [restartedMain] Successfully released change log lock
+2025-01-27 09:59:06,913 INFO liquibase.logging.core.JavaLogger [restartedMain] Command execution complete
+2025-01-27 09:59:07,455 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27 09:59:07,476 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-01-27 09:59:07,488 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-01-27 09:59:07,582 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27 09:59:07,600 WARN org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27 09:59:07,609 INFO org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27 09:59:07,964 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27 09:59:07,965 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 09:59:08,146 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27 09:59:08,338 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-01-27 09:59:08,350 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-27 09:59:08,357 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2025-01-27 09:59:08,363 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CorrectionTpSpringApplication in 3.198 seconds (process running for 3.485)
+2025-01-27 10:04:05,804 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m59s521ms).
+2025-01-27 10:20:18,995 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m43s182ms).
+2025-01-27 10:23:47,913 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m28s919ms).
+2025-01-27 10:25:39,521 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-27 10:25:40,537 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-01-27 10:25:40,544 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 10:25:40,548 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-01-27 10:25:40,550 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-01-27 10:25:42,611 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-01-27 10:25:42,632 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CorrectionTpSpringApplication using Java 17.0.12 with PID 75886 (/Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring/target/classes started by fethi in /Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring)
+2025-01-27 10:25:42,632 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-01-27 10:25:42,633 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-01-27 10:25:42,652 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-27 10:25:42,652 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-27 10:25:42,985 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27 10:25:43,012 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2025-01-27 10:25:43,234 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2025-01-27 10:25:43,239 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:25:43,240 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2025-01-27 10:25:43,240 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27 10:25:43,263 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-01-27 10:25:43,263 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 611 ms
+2025-01-27 10:25:43,323 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2025-01-27 10:25:43,396 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ac6105e
+2025-01-27 10:25:43,397 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2025-01-27 10:25:43,529 INFO liquibase.logging.core.JavaLogger [restartedMain] Set default schema name to public
+2025-01-27 10:25:43,730 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 10:25:43,784 INFO liquibase.logging.core.JavaLogger [restartedMain] Database is up to date, no changesets to execute
+2025-01-27 10:25:43,786 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 10:25:43,791 INFO liquibase.logging.core.JavaLogger [restartedMain] UPDATE SUMMARY
+2025-01-27 10:25:43,791 INFO liquibase.logging.core.JavaLogger [restartedMain] Run:                          0
+2025-01-27 10:25:43,792 INFO liquibase.logging.core.JavaLogger [restartedMain] Previously run:              10
+2025-01-27 10:25:43,792 INFO liquibase.logging.core.JavaLogger [restartedMain] Filtered out:                 0
+2025-01-27 10:25:43,792 INFO liquibase.logging.core.JavaLogger [restartedMain] -------------------------------
+2025-01-27 10:25:43,792 INFO liquibase.logging.core.JavaLogger [restartedMain] Total change sets:           10
+2025-01-27 10:25:43,792 INFO liquibase.logging.core.JavaLogger [restartedMain] Update summary generated
+2025-01-27 10:25:43,792 INFO liquibase.logging.core.JavaLogger [restartedMain] Command execution complete
+2025-01-27 10:25:44,218 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27 10:25:44,239 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-01-27 10:25:44,250 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-01-27 10:25:44,343 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27 10:25:44,362 WARN org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27 10:25:44,372 INFO org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27 10:25:44,741 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27 10:25:44,743 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 10:25:44,927 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27 10:25:45,115 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-01-27 10:25:45,128 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:25:45,134 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2025-01-27 10:25:45,142 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CorrectionTpSpringApplication in 2.729 seconds (process running for 3.006)
+2025-01-27 10:26:13,119 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27 10:26:13,119 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-27 10:26:13,120 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2025-01-27 10:26:13,163 INFO fr.benseddik.correctiontpspring.controller.BookController [http-nio-8080-exec-1] Adding new book: BookRequest[title=, author=]
+2025-01-27 10:26:35,704 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-27 10:26:35,707 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-01-27 10:26:35,710 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 10:26:35,712 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-01-27 10:26:35,714 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-01-27 10:26:37,747 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-01-27 10:26:37,768 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CorrectionTpSpringApplication using Java 17.0.12 with PID 75984 (/Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring/target/classes started by fethi in /Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring)
+2025-01-27 10:26:37,768 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-01-27 10:26:37,769 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-01-27 10:26:37,786 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-27 10:26:37,787 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-27 10:26:38,122 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27 10:26:38,148 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2025-01-27 10:26:38,375 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2025-01-27 10:26:38,381 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:26:38,382 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2025-01-27 10:26:38,382 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27 10:26:38,403 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-01-27 10:26:38,403 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 616 ms
+2025-01-27 10:26:38,464 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2025-01-27 10:26:38,536 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@61b30e10
+2025-01-27 10:26:38,537 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2025-01-27 10:26:38,604 INFO liquibase.logging.core.JavaLogger [restartedMain] Set default schema name to public
+2025-01-27 10:26:38,805 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 10:26:38,862 INFO liquibase.logging.core.JavaLogger [restartedMain] Database is up to date, no changesets to execute
+2025-01-27 10:26:38,865 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 10:26:38,875 INFO liquibase.logging.core.JavaLogger [restartedMain] UPDATE SUMMARY
+2025-01-27 10:26:38,876 INFO liquibase.logging.core.JavaLogger [restartedMain] Run:                          0
+2025-01-27 10:26:38,876 INFO liquibase.logging.core.JavaLogger [restartedMain] Previously run:              10
+2025-01-27 10:26:38,876 INFO liquibase.logging.core.JavaLogger [restartedMain] Filtered out:                 0
+2025-01-27 10:26:38,876 INFO liquibase.logging.core.JavaLogger [restartedMain] -------------------------------
+2025-01-27 10:26:38,876 INFO liquibase.logging.core.JavaLogger [restartedMain] Total change sets:           10
+2025-01-27 10:26:38,876 INFO liquibase.logging.core.JavaLogger [restartedMain] Update summary generated
+2025-01-27 10:26:38,877 INFO liquibase.logging.core.JavaLogger [restartedMain] Command execution complete
+2025-01-27 10:26:39,147 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27 10:26:39,170 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-01-27 10:26:39,183 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-01-27 10:26:39,276 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27 10:26:39,294 WARN org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27 10:26:39,303 INFO org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27 10:26:39,664 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27 10:26:39,665 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 10:26:39,847 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27 10:26:40,036 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-01-27 10:26:40,049 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:26:40,056 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2025-01-27 10:26:40,062 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CorrectionTpSpringApplication in 2.516 seconds (process running for 2.778)
+2025-01-27 10:26:43,035 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27 10:26:43,035 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-27 10:26:43,036 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2025-01-27 10:26:43,101 ERROR fr.benseddik.correctiontpspring.error.ExceptionsHandler [http-nio-8080-exec-1] Method argument not valid: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<fr.benseddik.correctiontpspring.dto.BookResponse> fr.benseddik.correctiontpspring.controller.BookController.addBook(fr.benseddik.correctiontpspring.dto.BookRequest) with 2 errors: [Field error in object 'bookRequest' on field 'title': rejected value []; codes [NotBlank.bookRequest.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.title,title]; arguments []; default message [title]]; default message [Title is mandatory]] [Field error in object 'bookRequest' on field 'author': rejected value []; codes [NotBlank.bookRequest.author,NotBlank.author,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.author,author]; arguments []; default message [author]]; default message [Author is mandatory]] 
+2025-01-27 10:26:43,116 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<fr.benseddik.correctiontpspring.dto.BookResponse> fr.benseddik.correctiontpspring.controller.BookController.addBook(fr.benseddik.correctiontpspring.dto.BookRequest) with 2 errors: [Field error in object 'bookRequest' on field 'title': rejected value []; codes [NotBlank.bookRequest.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.title,title]; arguments []; default message [title]]; default message [Title is mandatory]] [Field error in object 'bookRequest' on field 'author': rejected value []; codes [NotBlank.bookRequest.author,NotBlank.author,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.author,author]; arguments []; default message [author]]; default message [Author is mandatory]] ]
+2025-01-27 10:27:10,509 ERROR fr.benseddik.correctiontpspring.error.ExceptionsHandler [http-nio-8080-exec-2] Method argument not valid: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<fr.benseddik.correctiontpspring.dto.BookResponse> fr.benseddik.correctiontpspring.controller.BookController.addBook(fr.benseddik.correctiontpspring.dto.BookRequest) with 4 errors: [Field error in object 'bookRequest' on field 'author': rejected value [null]; codes [NotBlank.bookRequest.author,NotBlank.author,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.author,author]; arguments []; default message [author]]; default message [Author is mandatory]] [Field error in object 'bookRequest' on field 'author': rejected value [null]; codes [NotNull.bookRequest.author,NotNull.author,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.author,author]; arguments []; default message [author]]; default message [Author is mandatory]] [Field error in object 'bookRequest' on field 'title': rejected value [null]; codes [NotBlank.bookRequest.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.title,title]; arguments []; default message [title]]; default message [Title is mandatory]] [Field error in object 'bookRequest' on field 'title': rejected value [null]; codes [NotNull.bookRequest.title,NotNull.title,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.title,title]; arguments []; default message [title]]; default message [Title is mandatory]] 
+2025-01-27 10:27:10,510 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-2] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<fr.benseddik.correctiontpspring.dto.BookResponse> fr.benseddik.correctiontpspring.controller.BookController.addBook(fr.benseddik.correctiontpspring.dto.BookRequest) with 4 errors: [Field error in object 'bookRequest' on field 'author': rejected value [null]; codes [NotBlank.bookRequest.author,NotBlank.author,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.author,author]; arguments []; default message [author]]; default message [Author is mandatory]] [Field error in object 'bookRequest' on field 'author': rejected value [null]; codes [NotNull.bookRequest.author,NotNull.author,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.author,author]; arguments []; default message [author]]; default message [Author is mandatory]] [Field error in object 'bookRequest' on field 'title': rejected value [null]; codes [NotBlank.bookRequest.title,NotBlank.title,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.title,title]; arguments []; default message [title]]; default message [Title is mandatory]] [Field error in object 'bookRequest' on field 'title': rejected value [null]; codes [NotNull.bookRequest.title,NotNull.title,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [bookRequest.title,title]; arguments []; default message [title]]; default message [Title is mandatory]] ]
+2025-01-27 10:31:08,564 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [SpringApplicationShutdownHook] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-27 10:31:08,566 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-01-27 10:31:08,569 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 10:31:08,570 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-01-27 10:31:08,571 INFO com.zaxxer.hikari.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-01-27 10:31:19,402 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 8.0.2.Final
+2025-01-27 10:31:19,423 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CorrectionTpSpringApplication using Java 17.0.12 with PID 76417 (/Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring/target/classes started by fethi in /Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring)
+2025-01-27 10:31:19,423 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-01-27 10:31:19,424 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-01-27 10:31:19,441 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-01-27 10:31:19,441 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-01-27 10:31:19,777 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27 10:31:19,803 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 22 ms. Found 3 JPA repository interfaces.
+2025-01-27 10:31:20,025 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2025-01-27 10:31:20,030 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:31:20,031 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2025-01-27 10:31:20,031 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27 10:31:20,051 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-01-27 10:31:20,052 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 610 ms
+2025-01-27 10:31:20,111 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2025-01-27 10:31:20,184 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@652589dd
+2025-01-27 10:31:20,184 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2025-01-27 10:31:20,252 INFO liquibase.logging.core.JavaLogger [restartedMain] Set default schema name to public
+2025-01-27 10:31:20,439 INFO liquibase.logging.core.JavaLogger [restartedMain] Creating database history table with name: public.databasechangelog
+2025-01-27 10:31:20,462 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 10:31:20,493 INFO liquibase.logging.core.JavaLogger [restartedMain] Creating snapshot
+2025-01-27 10:31:20,603 INFO liquibase.logging.core.JavaLogger [restartedMain] Successfully acquired change log lock
+2025-01-27 10:31:20,604 INFO liquibase.logging.core.JavaLogger [restartedMain] Using deploymentId: 7970280098
+2025-01-27 10:31:20,606 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 10:31:20,616 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-1::Fethi
+2025-01-27 10:31:20,622 INFO liquibase.logging.core.JavaLogger [restartedMain] Sequence book_seq created
+2025-01-27 10:31:20,623 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-1::Fethi ran successfully in 6ms
+2025-01-27 10:31:20,627 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-2::Fethi
+2025-01-27 10:31:20,628 INFO liquibase.logging.core.JavaLogger [restartedMain] Sequence borrow_seq created
+2025-01-27 10:31:20,629 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-2::Fethi ran successfully in 2ms
+2025-01-27 10:31:20,631 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-3::Fethi
+2025-01-27 10:31:20,633 INFO liquibase.logging.core.JavaLogger [restartedMain] Sequence user_seq created
+2025-01-27 10:31:20,633 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-3::Fethi ran successfully in 2ms
+2025-01-27 10:31:20,636 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-4::Fethi
+2025-01-27 10:31:20,638 INFO liquibase.logging.core.JavaLogger [restartedMain] Table book created
+2025-01-27 10:31:20,640 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-4::Fethi ran successfully in 4ms
+2025-01-27 10:31:20,643 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-5::Fethi
+2025-01-27 10:31:20,645 INFO liquibase.logging.core.JavaLogger [restartedMain] Table borrowing created
+2025-01-27 10:31:20,646 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-5::Fethi ran successfully in 3ms
+2025-01-27 10:31:20,649 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-6::Fethi
+2025-01-27 10:31:20,653 INFO liquibase.logging.core.JavaLogger [restartedMain] Table users created
+2025-01-27 10:31:20,655 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-6::Fethi ran successfully in 6ms
+2025-01-27 10:31:20,657 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-7::Fethi
+2025-01-27 10:31:20,660 INFO liquibase.logging.core.JavaLogger [restartedMain] Foreign key constraint added to borrowing (book_id)
+2025-01-27 10:31:20,661 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-7::Fethi ran successfully in 4ms
+2025-01-27 10:31:20,663 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/2025/01/24-02-changelog.xml::1737712462154-8::Fethi
+2025-01-27 10:31:20,664 INFO liquibase.logging.core.JavaLogger [restartedMain] Foreign key constraint added to borrowing (user_id)
+2025-01-27 10:31:20,665 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/2025/01/24-02-changelog.xml::1737712462154-8::Fethi ran successfully in 2ms
+2025-01-27 10:31:20,668 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/utils/changelog-default-value.xml::1713851378415-default-value-role::fethi
+2025-01-27 10:31:20,670 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to borrowing.borrow_date
+2025-01-27 10:31:20,671 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to borrowing.uuid
+2025-01-27 10:31:20,672 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to users.uuid
+2025-01-27 10:31:20,673 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to book.uuid
+2025-01-27 10:31:20,674 INFO liquibase.logging.core.JavaLogger [restartedMain] Default value added to book.is_available
+2025-01-27 10:31:20,675 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/utils/changelog-default-value.xml::1713851378415-default-value-role::fethi ran successfully in 7ms
+2025-01-27 10:31:20,679 INFO liquibase.logging.core.JavaLogger [restartedMain] Running Changeset: db/changelog/utils/changelog-load-data.xml::1713851378415-load-data::fethi
+2025-01-27 10:31:20,698 INFO liquibase.logging.core.JavaLogger [restartedMain] Data loaded from 'db/data/user.csv' into table 'users'
+2025-01-27 10:31:20,713 INFO liquibase.logging.core.JavaLogger [restartedMain] Data loaded from 'db/data/book.csv' into table 'book'
+2025-01-27 10:31:20,734 INFO liquibase.logging.core.JavaLogger [restartedMain] Data loaded from 'db/data/borrowing.csv' into table 'borrowing'
+2025-01-27 10:31:20,736 INFO liquibase.logging.core.JavaLogger [restartedMain] ChangeSet db/changelog/utils/changelog-load-data.xml::1713851378415-load-data::fethi ran successfully in 57ms
+2025-01-27 10:31:20,740 INFO liquibase.logging.core.JavaLogger [restartedMain] UPDATE SUMMARY
+2025-01-27 10:31:20,741 INFO liquibase.logging.core.JavaLogger [restartedMain] Run:                         10
+2025-01-27 10:31:20,741 INFO liquibase.logging.core.JavaLogger [restartedMain] Previously run:               0
+2025-01-27 10:31:20,741 INFO liquibase.logging.core.JavaLogger [restartedMain] Filtered out:                 0
+2025-01-27 10:31:20,741 INFO liquibase.logging.core.JavaLogger [restartedMain] -------------------------------
+2025-01-27 10:31:20,741 INFO liquibase.logging.core.JavaLogger [restartedMain] Total change sets:           10
+2025-01-27 10:31:20,741 INFO liquibase.logging.core.JavaLogger [restartedMain] Update summary generated
+2025-01-27 10:31:20,743 INFO liquibase.logging.core.JavaLogger [restartedMain] Update command completed successfully.
+2025-01-27 10:31:20,743 INFO liquibase.logging.core.JavaLogger [restartedMain] Liquibase: Update has been successful. Rows affected: 120
+2025-01-27 10:31:20,748 INFO liquibase.logging.core.JavaLogger [restartedMain] Successfully released change log lock
+2025-01-27 10:31:20,749 INFO liquibase.logging.core.JavaLogger [restartedMain] Command execution complete
+2025-01-27 10:31:22,328 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27 10:31:22,350 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-01-27 10:31:22,362 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-01-27 10:31:22,461 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27 10:31:22,479 WARN org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27 10:31:22,488 INFO org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27 10:31:22,906 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27 10:31:22,908 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 10:31:23,117 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27 10:31:23,313 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-01-27 10:31:23,330 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:31:23,337 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2025-01-27 10:31:23,344 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CorrectionTpSpringApplication in 4.133 seconds (process running for 4.446)
+2025-01-27 10:32:37,926 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-27 10:32:37,926 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-01-27 10:32:37,927 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2025-01-27 10:32:37,998 ERROR fr.benseddik.correctiontpspring.error.ExceptionsHandler [http-nio-8080-exec-1] Method argument not valid: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<fr.benseddik.correctiontpspring.dto.UserResponse> fr.benseddik.correctiontpspring.controller.UserController.addUser(fr.benseddik.correctiontpspring.dto.UserRequest) with 2 errors: [Field error in object 'userRequest' on field 'name': rejected value []; codes [NotBlank.userRequest.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequest.name,name]; arguments []; default message [name]]; default message [ne doit pas être vide]] [Field error in object 'userRequest' on field 'email': rejected value []; codes [NotBlank.userRequest.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequest.email,email]; arguments []; default message [email]]; default message [ne doit pas être vide]] 
+2025-01-27 10:32:38,011 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8080-exec-1] Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<fr.benseddik.correctiontpspring.dto.UserResponse> fr.benseddik.correctiontpspring.controller.UserController.addUser(fr.benseddik.correctiontpspring.dto.UserRequest) with 2 errors: [Field error in object 'userRequest' on field 'name': rejected value []; codes [NotBlank.userRequest.name,NotBlank.name,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequest.name,name]; arguments []; default message [name]]; default message [ne doit pas être vide]] [Field error in object 'userRequest' on field 'email': rejected value []; codes [NotBlank.userRequest.email,NotBlank.email,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [userRequest.email,email]; arguments []; default message [email]]; default message [ne doit pas être vide]] ]
+2025-01-27 10:43:18,979 INFO org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [File Watcher] Restarting due to 6 class path changes (0 additions, 0 deletions, 6 modifications)
+2025-01-27 10:43:18,984 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [Thread-1] Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-27 10:43:18,985 INFO org.apache.juli.logging.DirectJDKLog [tomcat-shutdown] Pausing ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:43:18,990 INFO org.springframework.boot.web.embedded.tomcat.GracefulShutdown [tomcat-shutdown] Graceful shutdown complete
+2025-01-27 10:43:18,990 INFO org.apache.juli.logging.DirectJDKLog [Thread-1] Stopping ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:43:18,995 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 10:43:18,999 INFO com.zaxxer.hikari.HikariDataSource [Thread-1] HikariPool-1 - Shutdown initiated...
+2025-01-27 10:43:19,001 INFO com.zaxxer.hikari.HikariDataSource [Thread-1] HikariPool-1 - Shutdown completed.
+2025-01-27 10:43:19,090 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting CorrectionTpSpringApplication using Java 17.0.12 with PID 76417 (/Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring/target/classes started by fethi in /Users/fethi/Workspaces/Formation/Afpa/jee2025/correctionTpSpring)
+2025-01-27 10:43:19,090 DEBUG org.springframework.boot.StartupInfoLogger [restartedMain] Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-01-27 10:43:19,090 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2025-01-27 10:43:19,180 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-27 10:43:19,187 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 6 ms. Found 3 JPA repository interfaces.
+2025-01-27 10:43:19,244 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port 8080 (http)
+2025-01-27 10:43:19,245 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:43:19,245 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2025-01-27 10:43:19,245 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-27 10:43:19,251 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2025-01-27 10:43:19,251 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 160 ms
+2025-01-27 10:43:19,266 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Starting...
+2025-01-27 10:43:19,290 INFO com.zaxxer.hikari.pool.HikariPool [restartedMain] HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@89db48d
+2025-01-27 10:43:19,291 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-2 - Start completed.
+2025-01-27 10:43:19,299 INFO liquibase.logging.core.JavaLogger [restartedMain] Set default schema name to public
+2025-01-27 10:43:19,349 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 10:43:19,375 INFO liquibase.logging.core.JavaLogger [restartedMain] Database is up to date, no changesets to execute
+2025-01-27 10:43:19,378 INFO liquibase.logging.core.JavaLogger [restartedMain] Reading from public.databasechangelog
+2025-01-27 10:43:19,381 INFO liquibase.logging.core.JavaLogger [restartedMain] UPDATE SUMMARY
+2025-01-27 10:43:19,381 INFO liquibase.logging.core.JavaLogger [restartedMain] Run:                          0
+2025-01-27 10:43:19,381 INFO liquibase.logging.core.JavaLogger [restartedMain] Previously run:              10
+2025-01-27 10:43:19,381 INFO liquibase.logging.core.JavaLogger [restartedMain] Filtered out:                 0
+2025-01-27 10:43:19,381 INFO liquibase.logging.core.JavaLogger [restartedMain] -------------------------------
+2025-01-27 10:43:19,381 INFO liquibase.logging.core.JavaLogger [restartedMain] Total change sets:           10
+2025-01-27 10:43:19,381 INFO liquibase.logging.core.JavaLogger [restartedMain] Update summary generated
+2025-01-27 10:43:19,381 INFO liquibase.logging.core.JavaLogger [restartedMain] Command execution complete
+2025-01-27 10:43:19,392 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-27 10:43:19,393 INFO org.hibernate.cache.internal.RegionFactoryInitiator [restartedMain] HHH000026: Second-level cache disabled
+2025-01-27 10:43:19,398 INFO org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo [restartedMain] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-27 10:43:19,398 WARN org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl [restartedMain] HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-27 10:43:19,402 INFO org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator [restartedMain] HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-27 10:43:19,440 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-27 10:43:19,440 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-27 10:43:19,501 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-27 10:43:19,574 WARN org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] Unable to start LiveReload server
+2025-01-27 10:43:19,581 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2025-01-27 10:43:19,582 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port 8080 (http) with context path '/'
+2025-01-27 10:43:19,585 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started CorrectionTpSpringApplication in 0.531 seconds (process running for 720.688)
+2025-01-27 10:43:19,586 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged

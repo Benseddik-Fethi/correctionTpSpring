@@ -4,9 +4,8 @@ import fr.benseddik.correctiontpspring.domain.User;
 import fr.benseddik.correctiontpspring.dto.UserRequest;
 import fr.benseddik.correctiontpspring.dto.UserResponse;
 import fr.benseddik.correctiontpspring.dto.mapper.UserMapper;
-import fr.benseddik.correctiontpspring.exception.UserNotFoundException;
+import fr.benseddik.correctiontpspring.error.exception.UserNotFoundException;
 import fr.benseddik.correctiontpspring.repository.IUserRepository;
-import io.swagger.v3.oas.annotations.servers.Server;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -37,14 +36,14 @@ public class UserService {
     public UserResponse getUserByEmail(String email) {
         User user = userRepository
                 .findByEmail(email)
-                .orElseThrow(UserNotFoundException::new);
+                .orElseThrow(() -> new UserNotFoundException("User not found"));
         return userMapper.toDto(user);
     }
 
     public UserResponse getUserByUuid(String uuid) {
         User user = userRepository
                 .findByUuid(UUID.fromString(uuid))
-                .orElseThrow(UserNotFoundException::new);
+                .orElseThrow(() -> new UserNotFoundException("User not found"));
         return userMapper.toDto(user);
     }
 }

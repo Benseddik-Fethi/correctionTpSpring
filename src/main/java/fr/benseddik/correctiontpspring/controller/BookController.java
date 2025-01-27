@@ -3,6 +3,7 @@ package fr.benseddik.correctiontpspring.controller;
 import fr.benseddik.correctiontpspring.dto.BookRequest;
 import fr.benseddik.correctiontpspring.dto.BookResponse;
 import fr.benseddik.correctiontpspring.service.BookService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,7 @@ public class BookController {
     private final BookService bookService;
 
     @PostMapping("/add")
-    public ResponseEntity<BookResponse> addBook(@RequestBody BookRequest bookRequest) {
+    public ResponseEntity<BookResponse> addBook(@RequestBody @Valid BookRequest bookRequest) {
         log.info("Adding new book: {}", bookRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(bookService.saveBook(bookRequest));
     }

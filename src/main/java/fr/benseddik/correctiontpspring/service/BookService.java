@@ -4,7 +4,7 @@ import fr.benseddik.correctiontpspring.domain.Book;
 import fr.benseddik.correctiontpspring.dto.BookResponse;
 import fr.benseddik.correctiontpspring.dto.BookRequest;
 import fr.benseddik.correctiontpspring.dto.mapper.IBookMapper;
-import fr.benseddik.correctiontpspring.exception.BookNotFoundException;
+import fr.benseddik.correctiontpspring.error.exception.BookNotFoundException;
 import fr.benseddik.correctiontpspring.repository.IBookRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -39,7 +39,7 @@ public class BookService {
     public BookResponse getBookByUuid(String uuid) {
         return bookMapper
                 .toBookResponse(bookRepository.findByUuid(UUID.fromString(uuid))
-                        .orElseThrow(BookNotFoundException::new));
+                        .orElseThrow(() -> new BookNotFoundException("Book not found")));
     }
 
     public void deleteBook(String uuid) {

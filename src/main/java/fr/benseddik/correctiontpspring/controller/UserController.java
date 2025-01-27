@@ -3,6 +3,7 @@ package fr.benseddik.correctiontpspring.controller;
 import fr.benseddik.correctiontpspring.dto.UserRequest;
 import fr.benseddik.correctiontpspring.dto.UserResponse;
 import fr.benseddik.correctiontpspring.service.UserService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -20,7 +21,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/add")
-    public ResponseEntity<UserResponse> addUser(@RequestBody UserRequest userRequest) {
+    public ResponseEntity<UserResponse> addUser(@RequestBody @Valid UserRequest userRequest) {
         log.info("add user request: {}", userRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.addUser(userRequest));
     }
