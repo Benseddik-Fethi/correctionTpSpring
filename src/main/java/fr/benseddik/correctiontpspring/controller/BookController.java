@@ -2,7 +2,7 @@ package fr.benseddik.correctiontpspring.controller;
 
 import fr.benseddik.correctiontpspring.dto.BookRequest;
 import fr.benseddik.correctiontpspring.dto.BookResponse;
-import fr.benseddik.correctiontpspring.service.BookService;
+import fr.benseddik.correctiontpspring.service.impl.BookServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,36 +18,36 @@ import java.util.List;
 @RequestMapping("/books")
 public class BookController {
 
-    private final BookService bookService;
+    private final BookServiceImpl bookServiceImpl;
 
     @PostMapping("/add")
     public ResponseEntity<BookResponse> addBook(@RequestBody @Valid BookRequest bookRequest) {
         log.info("Adding new book: {}", bookRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body(bookService.saveBook(bookRequest));
+        return ResponseEntity.status(HttpStatus.CREATED).body(bookServiceImpl.saveBook(bookRequest));
     }
 
     @GetMapping
     public ResponseEntity<List<BookResponse>> getAllBooks() {
         log.info("Getting all books");
-        return ResponseEntity.ok(bookService.getAllBooks());
+        return ResponseEntity.ok(bookServiceImpl.getAllBooks());
     }
 
     @GetMapping("/available")
     public ResponseEntity<List<BookResponse>> getAvailableBooks() {
         log.info("Get available books");
-        return ResponseEntity.ok(bookService.getAvailableBooks());
+        return ResponseEntity.ok(bookServiceImpl.getAvailableBooks());
     }
 
     @GetMapping("/{uuid}")
     public ResponseEntity<BookResponse> getBookByUuid(@PathVariable String uuid) {
         log.info("Getting book by uuid: {}", uuid);
-        return ResponseEntity.ok(bookService.getBookByUuid(uuid));
+        return ResponseEntity.ok(bookServiceImpl.getBookByUuid(uuid));
     }
 
     @DeleteMapping("/{uuid}")
     public ResponseEntity<String> deleteBook(@PathVariable String uuid) {
         log.info("Deleting book by uuid: {}", uuid);
-        bookService.deleteBook(uuid);
+        bookServiceImpl.deleteBook(uuid);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body("Livre avec uuid " + uuid + "a été supprimé");
     }
 }

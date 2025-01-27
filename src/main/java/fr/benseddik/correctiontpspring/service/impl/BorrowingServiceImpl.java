@@ -1,4 +1,4 @@
-package fr.benseddik.correctiontpspring.service;
+package fr.benseddik.correctiontpspring.service.impl;
 
 import fr.benseddik.correctiontpspring.domain.Book;
 import fr.benseddik.correctiontpspring.domain.Borrowing;
@@ -12,6 +12,7 @@ import fr.benseddik.correctiontpspring.error.exception.UserNotFoundException;
 import fr.benseddik.correctiontpspring.repository.IBookRepository;
 import fr.benseddik.correctiontpspring.repository.IBorrowingRepository;
 import fr.benseddik.correctiontpspring.repository.IUserRepository;
+import fr.benseddik.correctiontpspring.service.IBorrowingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -23,13 +24,14 @@ import java.util.UUID;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class BorrowingService {
+public class BorrowingServiceImpl implements IBorrowingService {
 
     private final IBorrowingRepository borrowingRepository;
     private final IUserRepository userRepository;
     private final IBookRepository bookRepository;
     private final IBorrowingMapper borrowingMapper;
 
+    @Override
     public BorrowingResponse borrowBook(String userUuid, String bookUuid) {
         log.info("Borrowing book using UUID: {} and book UUID: {}", userUuid, bookUuid);
         User user = userRepository.findByUuid(UUID.fromString(userUuid))
@@ -53,6 +55,7 @@ public class BorrowingService {
         return borrowingMapper.entityToborrowingResponse(borrowingRepository.save(borrowing));
     }
 
+    @Override
     public void returnBook(String borrowingUuid) {
         log.info("Return book using UUID: {}", borrowingUuid);
         Borrowing borrowing = borrowingRepository.findById(Long.valueOf(borrowingUuid))
@@ -62,6 +65,7 @@ public class BorrowingService {
         borrowingRepository.save(borrowing);
     }
 
+    @Override
     public List<BorrowingResponse> getUserBorrowings(String userUuid) {
         User user = userRepository.findByUuid(UUID.fromString(userUuid))
                 .orElseThrow(() -> new UserNotFoundException("Utilisateur avec UUID " + userUuid + " non trouvé"));

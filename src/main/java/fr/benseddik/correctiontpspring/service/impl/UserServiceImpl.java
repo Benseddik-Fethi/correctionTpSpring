@@ -1,4 +1,4 @@
-package fr.benseddik.correctiontpspring.service;
+package fr.benseddik.correctiontpspring.service.impl;
 
 import fr.benseddik.correctiontpspring.domain.User;
 import fr.benseddik.correctiontpspring.dto.UserRequest;
@@ -6,6 +6,7 @@ import fr.benseddik.correctiontpspring.dto.UserResponse;
 import fr.benseddik.correctiontpspring.dto.mapper.UserMapper;
 import fr.benseddik.correctiontpspring.error.exception.UserNotFoundException;
 import fr.benseddik.correctiontpspring.repository.IUserRepository;
+import fr.benseddik.correctiontpspring.service.IUserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -16,16 +17,18 @@ import java.util.UUID;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class UserService {
+public class UserServiceImpl implements IUserService {
 
     private final IUserRepository userRepository;
     private final UserMapper userMapper;
 
+    @Override
     public UserResponse addUser(UserRequest userRequest) {
         User user = userMapper.toEntity(userRequest);
         return userMapper.toDto(userRepository.save(user));
     }
 
+    @Override
     public List<UserResponse> getAllUsers() {
         return userRepository.findAll()
                 .stream()
@@ -33,6 +36,7 @@ public class UserService {
                 .toList();
     }
 
+    @Override
     public UserResponse getUserByEmail(String email) {
         User user = userRepository
                 .findByEmail(email)
@@ -40,6 +44,7 @@ public class UserService {
         return userMapper.toDto(user);
     }
 
+    @Override
     public UserResponse getUserByUuid(String uuid) {
         User user = userRepository
                 .findByUuid(UUID.fromString(uuid))

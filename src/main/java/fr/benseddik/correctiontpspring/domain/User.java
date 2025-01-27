@@ -6,23 +6,27 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
+import java.io.Serial;
+import java.io.Serializable;
 import java.util.UUID;
 
-@Entity
 @Getter
 @Setter
-@NoArgsConstructor
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
+@Entity
+@ToString
 @Table(name = "users")
-public class User {
+public class User extends AbstractAuditingEntity implements Serializable {
 
+    @Serial
+    private static final long serialVersionUID = 2456240789801539388L;
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq")
     @SequenceGenerator(name = "user_seq", sequenceName = "user_seq", allocationSize = 1, initialValue = 1000)
     @Column(nullable = false)
     private Long id;
-    private UUID uuid;
     @NotNull(message = "Name is mandatory")
     @NotBlank(message = "Name is mandatory")
     private String name;

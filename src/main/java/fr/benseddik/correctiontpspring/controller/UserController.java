@@ -2,7 +2,7 @@ package fr.benseddik.correctiontpspring.controller;
 
 import fr.benseddik.correctiontpspring.dto.UserRequest;
 import fr.benseddik.correctiontpspring.dto.UserResponse;
-import fr.benseddik.correctiontpspring.service.UserService;
+import fr.benseddik.correctiontpspring.service.impl.UserServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,23 +18,23 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserController {
 
-    private final UserService userService;
+    private final UserServiceImpl userServiceImpl;
 
     @PostMapping("/add")
     public ResponseEntity<UserResponse> addUser(@RequestBody @Valid UserRequest userRequest) {
         log.info("add user request: {}", userRequest);
-        return ResponseEntity.status(HttpStatus.CREATED).body(userService.addUser(userRequest));
+        return ResponseEntity.status(HttpStatus.CREATED).body(userServiceImpl.addUser(userRequest));
     }
 
     @GetMapping
     public ResponseEntity<List<UserResponse>> getAllUsers() {
         log.info("get all users");
-        return ResponseEntity.ok(userService.getAllUsers());
+        return ResponseEntity.ok(userServiceImpl.getAllUsers());
     }
 
     @GetMapping("/{uuid}")
     public ResponseEntity<UserResponse> getUserByUuid(@PathVariable String uuid) {
         log.info("get user by uuid: {}", uuid);
-        return ResponseEntity.ok(userService.getUserByUuid(uuid));
+        return ResponseEntity.ok(userServiceImpl.getUserByUuid(uuid));
     }
 }

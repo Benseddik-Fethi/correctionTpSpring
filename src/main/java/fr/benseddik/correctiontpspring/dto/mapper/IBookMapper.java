@@ -9,6 +9,7 @@ import org.mapstruct.*;
 public interface IBookMapper {
     Book bookResponseToBook(BookResponse bookResponse);
 
+    @Mapping(source = "available", target = "isAvailable")
     BookResponse toBookResponse(Book book);
 
     @BeanMapping(nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
