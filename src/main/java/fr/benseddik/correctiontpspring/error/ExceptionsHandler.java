@@ -10,12 +10,14 @@ import fr.benseddik.correctiontpspring.error.record.ExceptionWithErrorResponse;
 import fr.benseddik.correctiontpspring.error.record.FieldError;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
@@ -61,24 +63,28 @@ public class ExceptionsHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(BookNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     protected ResponseEntity<ErrorResponse> handleAccountLockedException(BookNotFoundException ex) {
         log.error("Account locked: {}", ex.getMessage());
         return handleExceptionWithErrorResponse(ex);
     }
 
     @ExceptionHandler(BookUnavailableException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     protected ResponseEntity<ErrorResponse> handleBookUnavailableException(BookUnavailableException ex) {
         log.error("Book unavailable: {}", ex.getMessage());
         return handleExceptionWithErrorResponse(ex);
     }
 
     @ExceptionHandler(BorrowingLimitExceededException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     protected ResponseEntity<ErrorResponse> handleBorrowingLimitExceededException(BorrowingLimitExceededException ex) {
         log.error("Borrowing limit exceeded: {}", ex.getMessage());
         return handleExceptionWithErrorResponse(ex);
     }
 
     @ExceptionHandler(UserNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
     protected ResponseEntity<ErrorResponse> handleUserNotFoundException(UserNotFoundException ex) {
         log.error("User not found: {}", ex.getMessage());
         return handleExceptionWithErrorResponse(ex);
